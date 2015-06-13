@@ -1,18 +1,14 @@
 {
-    "name":"luracast/restler",
-    "description":"Restler is a simple and effective multi-format Web API Server framework written in PHP. Just deal with your business logic in php, Restler will take care of the REST!",
-    "type":"library",
+    "name":"buonzz/myratios",
+    "description":"Fast and Non-Persistent Stats",
+    "type":"project",
     "keywords":["server","api","framework","REST"],
-    "homepage":"http://luracast.com/products/restler/",
+    "homepage":"http://www.buonzz.com/products/myratios/",
     "license":"LGPL-2.1",
     "authors":[
         {
-            "name":"Luracast",
-            "email":"arul@luracast.com"
-        },
-        {
-            "name":"Nick nickl- Lombard",
-            "email":"github@jigsoft.co.za"
+            "name":"Darwin Biler",
+            "email":"buonzz@gmail.com"
         }
     ],
     "extra":{
@@ -67,7 +63,11 @@
     "autoload":{
         "psr-0":{
             "Luracast\\Restler":"vendor/"
-        }
+        },
+        "classmap": [           
+            "app/controllers",
+            "app/models"
+        ]
     },
     "minimum-stability": "dev",
     "conflict": {
