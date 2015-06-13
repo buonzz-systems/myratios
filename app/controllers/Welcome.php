@@ -2,6 +2,6 @@
 
 class Welcome{
 	public function get(){		
-		return array("Your API" => "v1.0");
+		return array("MyRatios" => "v1.0");
 	}
 }
