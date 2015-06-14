@@ -6,7 +6,7 @@ class Pageview{
 	public function __construct(){
 		
 		if(class_exists('Memcached'))
-			this->cache = new Memcached();
+			$this->cache = new Memcached();
 		else	
 			$this->cache = new Memcache();
 		
