@@ -49,7 +49,7 @@ class Pageview{
 			if(!in_array($_SERVER['REMOTE_ADDR'], $v))
 			{
 				$v[] = $_SERVER['REMOTE_ADDR'];
-				$this->cache->set($v, $uniques);
+				$this->cache->set($v, $v);
 			}
 		}
 
