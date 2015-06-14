@@ -32,3 +32,9 @@ public/examples/_016_forms/cache
 composer.lock
 .DS_Store
 public/info.php
+vendor/bin/
+vendor/doctrine/
+vendor/phpdocumentor/
+vendor/phpspec/
+vendor/phpunit/
+vendor/sebastian/
