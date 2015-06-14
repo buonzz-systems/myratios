@@ -4,8 +4,12 @@ class Pageview{
 	private $cache;
 
 	public function __construct(){
-
-		$this->cache = new Memcache();
+		
+		if(class_exists('Memcached'))
+			this->cache = new Memcached();
+		else	
+			$this->cache = new Memcache();
+		
 		$this->cache->addServer('localhost', 11211);
 
 	}
