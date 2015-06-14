@@ -31,3 +31,4 @@ vendor/bin/behat
 public/examples/_016_forms/cache
 composer.lock
 .DS_Store
+public/info.php
