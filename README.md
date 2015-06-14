@@ -18,3 +18,18 @@ put this snippet inside the html body tag
 ```
 
 Change the myratios.dev with the actual hostname of where you setup the application.
+
+
+### Flushing the memcache
+
+there might be some occasions that you had messed up the stats. you can force the cache to get flushed by either ssh:
+
+```
+echo "flush_all" | nc -q 2 localhost 11211 
+```
+
+or via REST api
+
+```
+http://yourdomain.com/flush.json
+```
