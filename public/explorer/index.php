@@ -70,7 +70,7 @@
     </script>
 
     <script type="text/javascript">
-        var api_domain = 'myratios.dev';
+        var api_domain = 'myratios.cloudapp.net';
         (function() {
             var mr = document.createElement('script'); mr.type = 'text/javascript'; mr.async = true;
             mr.src = '//' + api_domain + '/pageview.json';
