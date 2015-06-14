@@ -40,6 +40,10 @@ class Pageview{
 			$uniques = array($_SERVER['REMOTE_ADDR']);
 			$this->cache->set('unique_ips', $uniques);		
 		}
+		elseif(!is_array($v)){
+			$uniques = array($_SERVER['REMOTE_ADDR']);
+			$this->cache->set('unique_ips', $uniques);	
+		}
 		else
 		{
 			if(!in_array($_SERVER['REMOTE_ADDR'], $v))
