@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>API Explorer</title>
+    <title>MyRatios API Explorer</title>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
@@ -13,6 +13,8 @@
     <script src='lib/backbone-min.js' type='text/javascript'></script>
     <script src='lib/swagger.js' type='text/javascript'></script>
     <script src='swagger-ui.js' type='text/javascript'></script>
+
+     <link rel="shortcut icon" href="../images/icon_016.png" />
 
     <style type="text/css">
         .swagger-ui-wrap {
@@ -82,9 +84,9 @@
 <body>
 <div id='header'>
     <div class="swagger-ui-wrap">
-        <a id="logo" href="https://github.com/Luracast/Restler-API-Explorer" target="_blank">API Explorer</a>
+        <a id="logo" href="https://github.com/buonzz-systems/myratios" target="_blank">MyRatios API Explorer</a>
         <form id='api_selector'>
-            <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="hidden"/></div>
+            <div class='input'><input placeholder="http://myratios.cloudapp.net" id="input_baseUrl" name="baseUrl" type="hidden"/></div>
             <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
             <div class='input'><a id="explore" href="#">Explore</a></div>
         </form>
