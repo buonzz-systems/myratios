@@ -15,6 +15,10 @@ class PageviewRepository{
 
 	}
 
+	public function set($key,$value){
+		return $this->cache->set($key,$value);
+	}
+
 	public function get($key){
 		return $this->cache->get($key);
 	}
