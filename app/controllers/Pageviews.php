@@ -42,11 +42,26 @@ class Pageviews{
 	
 	}
 
+	/**
+	*   Update a  Pageview.
+	*   
+	*   this is the method to call when you need to update a pageview hit.
+	*
+	*   @param string $id of this pageview 
+	*   @param string $request_data the updated data
+	*/
 	public function put($id, $request_data = NULL)
     {
 
     }
 
+    /**
+	*   Delete a  Pageview.
+	*   
+	*   this is the method to call when you need to delete a pageview hit.
+	*
+	*   @param string $id of this pageview
+	*/
     public function delete($id)
     {
 
