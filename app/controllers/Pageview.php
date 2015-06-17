@@ -1,5 +1,7 @@
 <?php
 
+use MyRatios\Memcached\PageviewRepository;
+
 class Pageview{
 
 	private $repository;

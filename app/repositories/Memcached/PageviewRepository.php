@@ -1,4 +1,4 @@
-<?php
+<?php namespace MyRatios\Memcached;
 
 class PageviewRepository{
 	
@@ -7,9 +7,9 @@ class PageviewRepository{
 	public function __construct(){
 		
 		if(class_exists('Memcached'))
-			$this->cache = new Memcached();
+			$this->cache = new \Memcached();
 		else	
-			$this->cache = new Memcache();
+			$this->cache = new \Memcache();
 		
 		$this->cache->addServer('localhost', 11211);
 
