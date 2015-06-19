@@ -3,6 +3,11 @@
 class Pageviews{
 
 	private $resource_name = 'pageviews';
+	private $redis;
+
+	public function __construct(){
+		$this->redis = new Predis\Client();
+	}
 
 	/**
 	*  Pageviews Collection Resource.
@@ -12,7 +17,13 @@ class Pageviews{
 	*  @return mixed
 	*/
 	public function index(){
-
+		$raw = $this->redis->lrange($this->resource_name, 0, -1);
+		$output = array();
+		foreach($raw as $r)
+		{
+			$output[] = unserialize($r);
+		}
+		return $output;
 	}
 
 	/**
@@ -39,7 +50,23 @@ class Pageviews{
 	*   @param string $tourid what tour this is from
 	*/
 	public function post($accountid = NULL, $networkid = NULL, $siteid = NULL, $tourid = NULL){		
-	
+		$params = array('accountid' => $accountid,
+						'networkid' => $networkid,
+						'siteid' => $siteid,
+						'tourid' => $tourid,
+						'ip'=> $_SERVER['REMOTE_ADDR'],
+						'user_agent' => $_SERVER['HTTP_USER_AGENT']);
+
+
+		if(strlen($_SERVER['HTTP_REFERER'])>0)
+		{
+			$params['referer']  = $_SERVER['HTTP_REFERER'];
+			$params['host'] =  parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
+		}
+
+
+		return $this->redis->rpush($this->resource_name, serialize($params));
+
 	}
 
 	/**

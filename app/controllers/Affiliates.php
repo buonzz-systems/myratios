@@ -3,6 +3,7 @@
 class Affiliates{
 
 	private $resource_name = 'pageviews';
+	private $redis;
 
 	/**
 	*  Pageviews Collection Resource.
