@@ -1,7 +1,7 @@
 function bmr_ajax(url, callback, data, x) {
 	try {
 		x = new(this.XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
-		x.open(data ? 'POST' : 'GET', url, 1);
+		x.open('GET', url, 1);
 		x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 		x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		x.onreadystatechange = function () {
@@ -15,5 +15,5 @@ function bmr_ajax(url, callback, data, x) {
 
 var bmr_params = {};
 
-bmr_ajax('//'+bmr_api_domain + '/pageviews', null, bmr_params, null );
+bmr_ajax('//'+bmr_api_domain + '/pageviews/hit.json', null, bmr_params, null );
 

@@ -70,6 +70,38 @@ class Pageviews{
 	}
 
 	/**
+	*   Record new Pageview via HTTP GET.
+	*   
+	*   this is the method to call when you need to record a new pageview hit.
+	*
+	*   @param string $accountid account id of this pageview 
+	*   @param string $networkid the network on which things belongs into
+	*   @param string $siteid site on which this pageview belongs
+	*   @param string $tourid what tour this is from
+	*/
+	public function getHit($accountid = NULL, $networkid = NULL, $siteid = NULL, $tourid = NULL){		
+		$params = array('accountid' => $accountid,
+						'networkid' => $networkid,
+						'siteid' => $siteid,
+						'tourid' => $tourid,
+						'ip'=> $_SERVER['REMOTE_ADDR'],
+						'user_agent' => $_SERVER['HTTP_USER_AGENT']);
+
+
+		if(strlen($_SERVER['HTTP_REFERER'])>0)
+		{
+			$params['referer']  = $_SERVER['HTTP_REFERER'];
+			$params['host'] =  parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
+		}
+
+
+		return $this->redis->rpush($this->resource_name, serialize($params));
+
+	}
+
+
+
+	/**
 	*   Update a  Pageview.
 	*   
 	*   this is the method to call when you need to update a pageview hit.
