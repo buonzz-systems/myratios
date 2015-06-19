@@ -15,5 +15,5 @@ function bmr_ajax(url, callback, data, x) {
 
 var bmr_params = {};
 
-bmr_ajax('//'+bmr_api_domain + '/pageviews.json', null, bmr_params, null );
+bmr_ajax('//'+bmr_api_domain + '/pageviews', null, bmr_params, null );
 
