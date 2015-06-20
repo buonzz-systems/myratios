@@ -1,5 +1,7 @@
 <?php
 
+use Luracast\Restler\RestException;
+
 class Pageviews{
 
 	private $resource_name = 'pageviews';
@@ -36,7 +38,7 @@ class Pageviews{
 	*  @return json
 	*/
 	public function get($id){		
-	
+		throw new RestException(400, "Individual pageview items cannnot be retrieved");
 	}
 
 	/**
@@ -44,7 +46,7 @@ class Pageviews{
 	*   
 	*   this is the method to call when you need to record a new pageview hit.
 	*
-	*   @url POST pageviews  
+	*   @url POST   
 	*	@url GET  hit
 	*
 	*   @param string $accountid account id of this pageview 
@@ -83,7 +85,7 @@ class Pageviews{
 	*/
 	public function put($id, $request_data = NULL)
     {
-
+    	throw new RestException(400, "Updating of Pageview is not allowed");
     }
 
     /**
@@ -95,6 +97,6 @@ class Pageviews{
 	*/
     public function delete($id)
     {
-
+    	throw new RestException(400, "Deletion of Pageview is not allowed");
     }
 }
