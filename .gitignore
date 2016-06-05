@@ -11,11 +11,7 @@ tag.sh
 bin/*
 build/*
 build
-public/examples/_014_oauth2_client/cache
-public/examples/_015_oauth2_server/cache
-public/examples/_015_oauth2_server/OAuth2/db
 vendor/bin/behat
-public/examples/_016_forms/cache
 composer.lock
 .DS_Store
 public/info.php
