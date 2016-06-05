@@ -30,10 +30,14 @@ sudo nginx -s reload
 
 ### Configure logstash
 
-
-
 Copy the logstash patterns to /etc folder
 
 ```
-sudo cp logstash/patterns/* /etc/logstash/patterns/
+sudo cp -R logstash/patterns /etc/logstash/
+```
+
+test the configuration
+
+```
+logstash agent -f logstash.conf
 ```
