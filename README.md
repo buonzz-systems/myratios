@@ -36,8 +36,8 @@ Copy the logstash patterns to /etc folder
 sudo cp -R logstash/patterns /etc/logstash/
 ```
 
-test the configuration
+Run it
 
 ```
-logstash agent -f logstash.conf
+nohup /opt/logstash/bin/logstash agent -f logstash/config/nginx.conf &
 ```
