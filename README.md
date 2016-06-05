@@ -6,7 +6,7 @@ Super Fast Data Tracking and Reporting using Logstash, ElasticSearch and Kibana
 
 
 Clone the project to your server
-** make sure to replace domain.com with your actual domain**
+**make sure to replace domain.com with your actual domain**
 
 ```
 git clone https://github.com/buonzz-systems/myratios.git myratios.domain.com
