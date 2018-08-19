@@ -16,3 +16,4 @@ composer.lock
 .DS_Store
 public/info.php
 vendor
+/docker/nginx/logs/*.log
